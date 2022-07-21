@@ -1,0 +1,51 @@
+<!--Jerry French
+csc350 week4 extra
+7/21/2022-->
+
+<!docType html>
+<html>
+
+<head>
+    <title>Mars Now and Then</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <script>//jquery
+        $(document).ready(function(){
+            $('#lnkMarsNow').click(function(){
+                $('.planet').hide();//hide both planets
+                $('.marsThen').fadeIn(500);//fade in ancient mars
+                $('.divTitle').text('Ancient Mars').hide().fadeIn();  //change title
+
+            });
+
+            $('#lnkMarsThen').click(function(){
+                $('.planet').hide();//hide both planets
+                $('.marsNow').fadeIn(500);//fade in ancient mars
+                $('.divTitle').text('Mars Today').hide().fadeIn();  //change title
+            });
+        });
+
+    </script>
+
+<div class="divTitle">Mars Today</div>
+<div class="marsNow planet">
+    <a id="lnkMarsNow">
+        <img src="images/mars.png" class="imgMars"/>
+    </a>
+</div>
+
+<div class="marsThen planet" style="display:none ;">
+    <a id="lnkMarsThen">
+        <img src="images/ancientMars.png" class="imgMars"/>
+    </a>
+
+</div>
+
+
+</body>
+
+</html>
